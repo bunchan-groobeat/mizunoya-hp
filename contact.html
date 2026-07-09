@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ | 有限会社 水野谷自動車（矢吹町）</title>
+<meta name="description" content="有限会社 水野谷自動車へのお問い合わせ。車検・整備・鈑金塗装・中古車・ボディーコーティングのご相談を、フォームまたはお電話（0248-43-2455）で承ります。">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+<!-- ===== ヘッダー ===== -->
+<header id="header">
+  <div id="header_inner">
+    <div id="logo_image"><a class="text_logo" href="index.html"><span class="lg_en">MIZUNOYA JIDOSHA</span><span class="lg_ja">有限会社 水野谷自動車</span></a></div>
+    <input type="checkbox" id="nav_toggle">
+    <label class="nav_toggle_btn" for="nav_toggle" aria-label="メニュー"><span></span></label>
+    <nav class="global_menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="maintenance.html">車検整備</a></li>
+        <li><a href="repair.html">鈑金・塗装</a></li>
+        <li><a href="usedcar-sales.html">中古車販売</a></li>
+        <li><a href="coating.html">コーティング</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== ページ見出し ===== -->
+<div id="main_image3"><h1>お問い合わせ</h1></div>
+<div class="container"><ol class="breadcrumb"><li><a href="index.html">HOME</a> ／ お問い合わせ</li></ol></div>
+
+<!-- ===== お問い合わせ ===== -->
+<div class="contact_wrap">
+  <p class="contact_lead">車検・整備、鈑金塗装・ガラスリペア、中古車、ボディーコーティングなど、お気軽にご相談ください。<br>お急ぎの場合はお電話（<a href="tel:0248-43-2455">0248-43-2455</a> ／ 受付 9:00 - 18:00 [ 日・祝日除く ]）が確実です。</p>
+
+  <!-- 本番はFormspreeの正式IDに差替（切替時）。受信先は水野谷自動車様ご本人のメールアドレスに設定すること（J-DRYの教訓） -->
+  <form class="contact_form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <dl><dt>お名前<span class="req">必須</span></dt><dd><input type="text" name="お名前" required></dd></dl>
+    <dl><dt>メールアドレス<span class="req">必須</span></dt><dd><input type="email" name="メールアドレス" required></dd></dl>
+    <dl><dt>電話番号</dt><dd><input type="tel" name="電話番号"></dd></dl>
+    <dl><dt>お問い合わせ種別</dt><dd>
+      <select name="お問い合わせ種別">
+        <option value="車検・整備">車検・整備</option>
+        <option value="鈑金・塗装・ガラスリペア">鈑金・塗装・ガラスリペア</option>
+        <option value="中古車販売">中古車販売</option>
+        <option value="ボディーコーティング">ボディーコーティング</option>
+        <option value="その他">その他</option>
+      </select>
+    </dd></dl>
+    <dl><dt>お問い合わせ内容<span class="req">必須</span></dt><dd><textarea name="お問い合わせ内容" required></textarea></dd></dl>
+    <div class="form_status" hidden></div>
+    <p class="contact_submit"><button type="submit">送信する</button></p>
+  </form>
+</div>
+
+<!-- ===== フッター ===== -->
+<footer>
+  <div id="footer_top"><div id="footer_top_inner">
+    <div id="footer_logo_image"><span class="text_logo"><span class="lg_en">MIZUNOYA JIDOSHA</span><span class="lg_ja">有限会社 水野谷自動車</span></span></div>
+    <p id="footer_info">〒969-0265 福島県西白河郡矢吹町中畑南93-2<br>TEL 0248-43-2455 ／ 受付時間 9:00 - 18:00 [ 日・祝日除く ]</p>
+    <ul id="footer_menu_list">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="maintenance.html">車検整備</a></li>
+      <li><a href="repair.html">鈑金・塗装・ガラスリペア</a></li>
+      <li><a href="usedcar-sales.html">中古車販売</a></li>
+      <li><a href="coating.html">ボディーコーティング</a></li>
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </div></div>
+  <div id="footer_bottom"><p id="copyright">&copy; 有限会社 水野谷自動車 All Rights Reserved.</p></div>
+</footer>
+<a id="return_top" href="#" aria-label="ページ上部へ戻る">↑</a>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

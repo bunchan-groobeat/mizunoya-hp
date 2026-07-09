@@ -1,0 +1,7 @@
+# 回収した生データ(元WPからのDL・非公開)
+_source/
+# 回収画像のWebP一括変換置き場(本番未参照・重量)
+assets/img/collected/
+# OS/エディタ
+Thumbs.db
+.DS_Store
