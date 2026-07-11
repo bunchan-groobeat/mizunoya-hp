@@ -6,35 +6,9 @@
    配色: 濃紺ブルー(公的・堅実) + 赤(電話CTA)。
    ========================================================= */
 
-/* =========================================================
-   ★★★ 配色トーン切替 — サイト全体で「ここ1か所」だけ ★★★
-   ---------------------------------------------------------
-   下の【適用】ブロックの2行を書き換えると、トップ＋下層6ページの
-   メイン/サブ配色が一斉に切り替わります（README参照）。
-
-     ・赤メイン案(既定) : --brand-main = 赤 / --brand-sub = 紺
-     ・紺メイン案        : --brand-main = 紺 / --brand-sub = 赤
-
-   ※ 電話CTA(赤)・フッターベタ(紺)・ヒーロー背景(紺)は
-     「視認性/締め色」として固定（トーンに依らず不変）。
-========================================================= */
 :root{
-  /* 看板から採色した不変のブランド色（ここは変えない） */
-  --brand-red:#d8232a;    /* ミズノヤシドウシャ 赤枠ロゴの赤 */
-  --brand-navy:#1a408c;   /* KURU MAYA バッジの紺 */
-
-  /* 【適用】▼▼▼ トーン切替はこの2行だけ ▼▼▼
-     紺メインにするには 2行を入れ替える:
-       --brand-main: var(--brand-navy);
-       --brand-sub:  var(--brand-red);   */
-  --brand-main: var(--brand-red);
-  --brand-sub:  var(--brand-navy);
-  /* 【適用】▲▲▲ ここまで ▲▲▲ */
-}
-
-:root{
-  --accent:   var(--brand-main);  /* 主アクセント: トーンのメイン色(見出しEN・リンク・各所) */
-  --accent-2: var(--brand-red);   /* 電話CTA: 赤で固定(緊急連絡の視認性) */
+  --accent:#13497e;      /* 主アクセント: 濃紺ブルー(認証・堅実・信頼) */
+  --accent-2:#c8102e;    /* 電話CTA: 赤(緊急連絡の視認性) */
   --base:#222a31;        /* 本文・濃色: ダークスレート */
   --panel:#eef2f6;       /* 淡色面: 帯・フッター背景 */
   --line:#d9dee4;        /* 罫線 */
@@ -138,13 +112,14 @@
    ・base.css は一切変更していない(トークン上書き + 追加クラスのみ)。
 ========================================================= */
 
-/* --- 旧名エイリアス(不変のブランド色。既存コードの後方互換用) --- */
+/* --- 看板から目視で拾った基準色(01_看板.jpg) --- */
 :root{
-  --red:  var(--brand-red);   /* = 看板赤(固定)。トーンで動かしたい箇所は --brand-main を使う */
-  --navy: var(--brand-navy);  /* = KURU MAYA紺(固定)。締め色として使用 */
+  --red:#d8232a;    /* ミズノヤシドウシャ 赤枠ロゴの赤(温かみのある鮮やかな標識赤) */
+  --navy:#1a408c;   /* KURU MAYA バッジの紺(彩度高めのロイヤルネイビー) */
 }
-/* 主アクセント(--accent)は冒頭のトーン切替(--brand-main)で全ページ一斉に決まる。
-   TOPページ個別の色上書きは廃止し、下記の装飾は --brand-main / --brand-sub を参照する。 */
+/* TOPページのみ: base.css の主アクセント(既定は認証工場の濃紺)を「看板赤」に差し替える。
+   → section見出しEN・「詳しく見る→」・お知らせ日付・リンクhover・電話CTAが赤系で統一される。 */
+.home{ --accent:var(--red); --accent-2:var(--red); }
 
 /* ヘッダー/フッターの仮ロゴ画像(logo-temp.svg は縦長のためサイズ固定) */
 .home #header .brand_logo img{ height:54px; width:auto; display:block; }
@@ -158,7 +133,7 @@
 --------------------------------------------------------- */
 .hero{
   position:relative; min-height:78vh; display:flex; align-items:center; justify-content:center;
-  overflow:hidden; background:var(--brand-navy); color:#fff; text-align:center; /* ヒーロー背景は締めの紺で固定 */
+  overflow:hidden; background:var(--navy); color:#fff; text-align:center;
 }
 .hero_bg{ position:absolute; inset:0; }
 .hero_bg img{ width:100%; height:100%; object-fit:cover; }
@@ -168,7 +143,7 @@
 .hero_kuru{ height:42px; width:auto; filter:drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
 .hero_since{
   font-family:Arial,var(--sans); font-weight:900; letter-spacing:.26em; font-size:14px;
-  padding:6px 14px; border:2px solid #fff; border-radius:3px; background:var(--brand-main); /* トーンに追従 */
+  padding:6px 14px; border:2px solid #fff; border-radius:3px; background:rgba(216,35,42,.9);
 }
 .hero_copy{
   font-family:var(--mincho); font-weight:bold; font-size:46px; line-height:1.4; letter-spacing:.02em;
@@ -196,17 +171,17 @@
 .svc4_grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
 .svc_card{
   position:relative; display:flex; flex-direction:column; text-align:center;
-  background:#fff; border:2px solid var(--brand-main); border-radius:5px; padding:28px 20px 24px;
+  background:#fff; border:2px solid var(--red); border-radius:5px; padding:28px 20px 24px;
   box-shadow:0 3px 10px rgba(0,0,0,.05); transition:transform .2s, box-shadow .2s;
 }
 .svc_card::before{ content:""; position:absolute; inset:5px; border:1px solid rgba(216,35,42,.30); border-radius:3px; pointer-events:none; }
 .svc_card:hover{ transform:translateY(-5px); box-shadow:0 14px 28px rgba(0,0,0,.12); }
-.svc_icon{ width:60px; height:60px; margin:0 auto 12px; color:var(--brand-main); }
+.svc_icon{ width:60px; height:60px; margin:0 auto 12px; color:var(--red); }
 .svc_icon svg{ width:100%; height:100%; }
-.svc_no{ display:block; font-family:Arial,var(--sans); font-weight:900; font-size:13px; letter-spacing:.12em; color:var(--brand-sub); }
+.svc_no{ display:block; font-family:Arial,var(--sans); font-weight:900; font-size:13px; letter-spacing:.12em; color:var(--navy); }
 .svc_title{ display:block; font-family:var(--mincho); font-weight:bold; font-size:20px; margin:2px 0 12px; }
 .svc_text{ display:block; font-size:13.5px; line-height:1.9; color:var(--base); text-align:left; flex:1 1 auto; }
-.svc_more{ display:block; margin-top:16px; font-size:13px; font-weight:bold; color:var(--brand-main); }
+.svc_more{ display:block; margin-top:16px; font-size:13px; font-weight:bold; color:var(--red); }
 @media (max-width:1000px){ .svc4_grid{ grid-template-columns:repeat(2,1fr); gap:16px; } }
 @media (max-width:520px){ .svc4_grid{ grid-template-columns:1fr; } }
 
@@ -214,7 +189,7 @@
    3. お知らせ / ブログ(雛形)
 --------------------------------------------------------- */
 .news_list li{ align-items:center; }
-.cat_tag{ font-size:11px; font-weight:bold; color:#fff; background:var(--brand-sub); border-radius:3px; padding:3px 10px; line-height:1.6; }
+.cat_tag{ font-size:11px; font-weight:bold; color:#fff; background:var(--navy); border-radius:3px; padding:3px 10px; line-height:1.6; }
 .news_more_wrap{ text-align:center; margin-top:26px; }
 .news_more_note{ font-size:13px; color:var(--muted); }
 
@@ -228,8 +203,8 @@
 --------------------------------------------------------- */
 .insta_section .section_head{ margin-bottom:14px; }
 .insta_account{ text-align:center; margin:0 0 26px; }
-.insta_account a{ font-weight:bold; color:var(--brand-sub); letter-spacing:.04em; }
-.insta_account a:hover{ color:var(--brand-main); }
+.insta_account a{ font-weight:bold; color:var(--navy); letter-spacing:.04em; }
+.insta_account a:hover{ color:var(--red); }
 
 /* ---------------------------------------------------------
    6. 会社案内ダイジェスト
@@ -238,13 +213,13 @@
 .cd_inner{ display:flex; gap:48px; align-items:center; width:var(--container); max-width:100%; margin:0 auto; padding:84px 20px; }
 .cd_lead{ flex:1 1 46%; }
 .cd_map{ flex:1 1 54%; }
-.cd_since{ font-family:var(--mincho); font-size:22px; font-weight:bold; color:var(--brand-sub); margin:0 0 14px; }
-.cd_since strong{ color:var(--brand-main); font-size:26px; }
+.cd_since{ font-family:var(--mincho); font-size:22px; font-weight:bold; color:var(--navy); margin:0 0 14px; }
+.cd_since strong{ color:var(--red); font-size:26px; }
 .cd_text{ font-size:14.5px; line-height:2; margin:0 0 22px; }
-.cd_cert{ display:inline-flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--line); border-left:5px solid var(--brand-sub); border-radius:4px; padding:12px 20px; margin:0 0 16px; }
+.cd_cert{ display:inline-flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--line); border-left:5px solid var(--navy); border-radius:4px; padding:12px 20px; margin:0 0 16px; }
 .cd_badge{ height:48px; width:auto; }
 .cd_cert_label{ display:block; font-size:11px; color:var(--muted); letter-spacing:.06em; }
-.cd_cert_no{ display:block; font-size:20px; font-weight:bold; color:var(--brand-sub); letter-spacing:.04em; }
+.cd_cert_no{ display:block; font-size:20px; font-weight:bold; color:var(--navy); letter-spacing:.04em; }
 .cd_access{ font-size:13.5px; color:var(--base); margin:0 0 24px; }
 .cd_map .map_wrap{ margin:0; max-width:100%; }
 @media (max-width:900px){
@@ -252,20 +227,15 @@
   .cd_since strong{ font-size:24px; }
 }
 
-/* 全ページ共通: CTA帯・フッターは"締めの紺"ベタ(指示書§2 配色)。
-   → 下層6ページも同じ紺フッターに統一。締め色なのでトーンに依らず固定(--brand-navy)。 */
-.cta_band{ background:var(--brand-navy); }
-#footer_top{ background:var(--brand-navy); }
-#footer_top_inner{ color:#fff; }
-#footer_info{ color:#dfe6f2; }
-#footer_menu_list a{ color:#fff; }
-#footer_menu_list a:hover{ color:#ffd0d3; }
-#footer_bottom{ background:#132f66; }
-#copyright{ color:#aeb9d0; }
-/* 下層ページのフッターは文字ロゴ(text_logo)。紺地で読めるよう白に反転。 */
-#footer_logo_image .text_logo .lg_en{ color:#dfe6f2; }
-#footer_logo_image .text_logo .lg_ja{ color:#fff; }
-#footer_logo_image .text_logo:hover .lg_ja{ color:#ffd0d3; }
+/* TOPページ: CTA帯・フッターは"締めの紺"に */
+.home .cta_band{ background:var(--navy); }
+.home #footer_top{ background:var(--navy); }
+.home #footer_top_inner{ color:#fff; }
+.home #footer_info{ color:#dfe6f2; }
+.home #footer_menu_list a{ color:#fff; }
+.home #footer_menu_list a:hover{ color:#ffd0d3; }
+.home #footer_bottom{ background:#132f66; }
+.home #copyright{ color:#aeb9d0; }
 
 /* ---------------------------------------------------------
    スマホ常時表示 電話ボタン(フローティング)
@@ -275,15 +245,14 @@
   .floating_tel{
     display:flex; position:fixed; left:12px; right:12px; bottom:12px; z-index:60;
     align-items:center; justify-content:center; gap:12px; padding:11px 16px;
-    background:var(--brand-red); color:#fff !important; border-radius:9px; box-shadow:0 6px 18px rgba(0,0,0,.28); /* 電話=赤で固定 */
+    background:var(--red); color:#fff !important; border-radius:9px; box-shadow:0 6px 18px rgba(0,0,0,.28);
   }
   .floating_tel svg{ width:22px; height:22px; flex:0 0 auto; }
   .floating_tel .ft_txt{ line-height:1.15; text-align:left; }
   .floating_tel .ft_sub{ display:block; font-size:10px; font-weight:normal; }
   .floating_tel .ft_num{ display:block; font-size:20px; font-weight:bold; letter-spacing:.02em; }
-  /* 全ページ共通: フローティング電話ボタンと重ならないよう #return_top を上げ、下に余白を確保 */
-  #return_top{ right:14px; bottom:80px; width:46px; height:46px; border-radius:50%; }
-  body{ padding-bottom:74px; }
+  .home #return_top{ right:14px; bottom:80px; width:46px; height:46px; border-radius:50%; }
+  body.home{ padding-bottom:74px; }
 }
 
 /* ---------------------------------------------------------
@@ -296,61 +265,3 @@
   .hero_scroll_arrow::after{ animation:none; }
 }
 /* ▲▲▲ TOPページ リニューアル仮組み ここまで ▲▲▲ */
-
-/* =========================================================
-   ▼▼▼ お知らせ/ブログ 雛形(2026-07-10 ジロー) ▼▼▼
-   ・一覧(blog.html) + 記事(blog-article.html)。J-DRYのmicroCMS方式に寄せた構造。
-   ・追加クラスのみ。base.css は無変更。
-========================================================= */
-
-/* 一覧: 記事アーカイブ(画像 + 見出し/日付/抜粋) */
-.blog_archive{ width:820px; max-width:100%; margin:0 auto; padding:60px 20px 90px; }
-.blog_archive .archive_head{ text-align:center; margin:0 0 40px; }
-.blog_archive .archive_head .en{ display:block; font-size:13px; letter-spacing:.2em; color:var(--accent); font-weight:bold; margin:0 0 10px; }
-.blog_archive .archive_head .ja{ font-size:30px; font-weight:bold; font-family:var(--mincho); }
-.blog_list{ margin:0; }
-.blog_list li{ display:flex; gap:22px; padding:0 0 26px; margin:0 0 26px; border-bottom:1px dotted var(--line); align-items:flex-start; }
-.blog_list li:last-child{ border-bottom:none; }
-.blog_list .thumb{ flex:0 0 auto; width:180px; height:112px; overflow:hidden; background:var(--panel); border-radius:3px; }
-.blog_list .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
-.blog_list .body{ flex:1 1 auto; min-width:0; }
-.blog_list .title{ font-size:18px; font-weight:bold; font-family:var(--mincho); line-height:1.6; margin:0 0 8px; }
-.blog_list .title a{ color:var(--base); }
-.blog_list .title a:hover{ color:var(--accent); }
-.blog_list .meta{ display:flex; gap:10px; align-items:center; margin:0 0 8px; }
-.blog_list .meta .date{ font-size:13px; font-weight:bold; color:var(--accent); }
-.blog_list .meta .cat{ font-size:11px; font-weight:bold; color:#fff; background:var(--brand-sub); border-radius:3px; padding:2px 9px; }
-.blog_list .excerpt{ font-size:13.5px; line-height:1.9; color:var(--base); }
-.blog_state{ text-align:center; color:var(--muted); padding:30px 0; font-size:14px; }
-@media (max-width:820px){
-  .blog_archive{ padding:40px 15px 70px; }
-  .blog_archive .archive_head .ja{ font-size:22px; }
-  .blog_list li{ gap:14px; }
-  .blog_list .thumb{ width:110px; height:74px; }
-  .blog_list .title{ font-size:15.5px; }
-}
-
-/* 記事詳細 */
-.blog_single{ width:760px; max-width:100%; margin:0 auto; padding:56px 20px 90px; }
-.blog_single .article_head{ border-bottom:2px solid var(--brand-main); padding:0 0 20px; margin:0 0 30px; }
-.blog_single .article_meta{ display:flex; gap:10px; align-items:center; margin:0 0 12px; }
-.blog_single .article_meta .date{ font-size:13px; font-weight:bold; color:var(--accent); }
-.blog_single .article_meta .cat{ font-size:11px; font-weight:bold; color:#fff; background:var(--brand-sub); border-radius:3px; padding:2px 9px; }
-.blog_single .article_title{ font-size:28px; font-weight:bold; font-family:var(--mincho); line-height:1.5; }
-.blog_single .article_thumb{ margin:0 0 30px; }
-.blog_single .article_thumb img{ width:100%; display:block; border-radius:4px; }
-.blog_body{ font-size:15px; line-height:2.0; }
-.blog_body > *{ margin:0 0 1.2em; }
-.blog_body h2{ font-size:21px; font-weight:bold; font-family:var(--mincho); border-left:5px solid var(--brand-main); padding-left:14px; line-height:1.5; margin:1.6em 0 .8em; }
-.blog_body h3{ font-size:17px; font-weight:bold; margin:1.4em 0 .6em; color:var(--brand-sub); }
-.blog_body img{ border-radius:4px; }
-.blog_body a{ color:var(--accent); text-decoration:underline; }
-.blog_body ul{ list-style:disc; padding-left:1.4em; }
-.blog_body ol{ list-style:decimal; padding-left:1.4em; }
-.blog_back{ text-align:center; margin:50px 0 0; }
-@media (max-width:820px){
-  .blog_single{ padding:36px 15px 70px; }
-  .blog_single .article_title{ font-size:21px; }
-  .blog_body{ font-size:14.5px; }
-}
-/* ▲▲▲ お知らせ/ブログ 雛形 ここまで ▲▲▲ */

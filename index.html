@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>有限会社 水野谷自動車 | 福島県西白河郡矢吹町の国指定認証工場</title>
-<meta name="description" content="福島県西白河郡矢吹町の有限会社 水野谷自動車。国指定の認証工場として、軽自動車から大型自動車まで車検整備・一般整備、鈑金塗装・ガラスリペア、中古車販売、ボディーコーティングを承ります。">
+<title>有限会社 水野谷自動車 | 福島県矢吹町のクルマのかかりつけ工場 SINCE 1978</title>
+<meta name="description" content="福島県西白河郡矢吹町の有限会社 水野谷自動車。SINCE 1978、国指定認証工場（仙4-6522）。車検整備・鈑金塗装・中古車販売・ボディーコーティングまで、クルマのことをまるごとお任せください。">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/theme.css">
 </head>
-<body>
+<!-- class="home" で TOPページだけに新配色(赤メイン/紺締め)・紺ベタフッターを適用。下層ページには影響させない。 -->
+<body class="home">
 <!-- ===== ヘッダー ===== -->
 <header id="header">
   <div id="header_inner">
-    <div id="logo_image"><a class="text_logo" href="index.html"><span class="lg_en">MIZUNOYA JIDOSHA</span><span class="lg_ja">有限会社 水野谷自動車</span></a></div>
+    <div id="logo_image"><a class="brand_logo" href="index.html"><img src="assets/img/logo-temp.svg" alt="ミズノヤシドウシャ 有限会社 水野谷自動車"></a></div>
     <input type="checkbox" id="nav_toggle">
     <label class="nav_toggle_btn" for="nav_toggle" aria-label="メニュー"><span></span></label>
     <nav class="global_menu">
@@ -29,69 +30,164 @@
   </div>
 </header>
 
-<!-- ===== メインスライダー ===== -->
-<div id="top_slider"><div class="slides">
-  <div class="slide"><img src="assets/img/mv1.webp" alt="水野谷自動車は国指定の認証工場です"></div>
-  <div class="slide"><img src="assets/img/mv2.webp" alt="板金・塗装・ガラスリペア"></div>
-  <div class="slide"><img src="assets/img/mv3.webp" alt="中古車販売"></div>
-</div><div class="slider_dots" aria-hidden="true"></div></div>
-<div id="sp_slider"><div class="slides">
-  <div class="slide"><img src="assets/img/mv1.webp" alt="水野谷自動車は国指定の認証工場です"></div>
-  <div class="slide"><img src="assets/img/mv2.webp" alt="板金・塗装・ガラスリペア"></div>
-  <div class="slide"><img src="assets/img/mv3.webp" alt="中古車販売"></div>
-</div></div>
-
-<!-- ===== 国指定認証工場 訴求(最上位) ===== -->
-<section class="cert_hero">
-  <p class="ch_en">NATIONAL CERTIFIED WORKSHOP</p>
-  <p class="ch_main">水野谷自動車は「国指定の認証工場」です</p>
-  <p class="ch_sub">軽自動車から大型自動車まで、車検整備・一般整備を確かな技術で承ります（仙台陸運局認証番号 仙4-6522）</p>
+<!-- =========================================================
+     1. ヒーロー
+     ・写真1枚ドン(既存 mv1.webp を仮使用) + キャッチ + SINCE 1978 + Scroll誘導
+     ・キャッチコピーは下記【A/B/C案】から社長が1つ選定。選定後、不要案のコメントを削除。
+       ── 案A(推し・指示書の軸): クルマのこと、まるごと。
+       ── 案B: この街のクルマを、1978年から。
+       ── 案C: 乗るを、ずっと守る。矢吹のかかりつけ工場。
+     ・ポルシェ仮イラスト(porsche-temp.svg)はライセンス確認中のため hero では既定で非表示。
+       社長がOKを出したらコメントを外して装飾として表示できる。
+========================================================= -->
+<section class="hero reveal">
+  <div class="hero_bg"><img src="assets/img/mv1.webp" alt="有限会社 水野谷自動車 工場外観" fetchpriority="high"></div>
+  <div class="hero_inner">
+    <p class="hero_badge_line"><img class="hero_kuru" src="assets/img/badge-temp.svg" alt="KURU MAYA"><span class="hero_since">SINCE 1978</span></p>
+    <h1 class="hero_copy">クルマのこと、まるごと。</h1>
+    <!-- 差し替え候補(社長選定用) — 案B: この街のクルマを、1978年から。 / 案C: 乗るを、ずっと守る。矢吹のかかりつけ工場。 -->
+    <p class="hero_lead">車検・整備／鈑金塗装／中古車販売／コーティング。<br>矢吹町のクルマのかかりつけ工場、水野谷自動車です。</p>
+    <div class="hero_actions">
+      <a class="tel_button" href="tel:0248-43-2455"><span><span class="tel_sub">お電話でのご相談</span><span class="tel_num">0248-43-2455</span></span></a>
+      <a class="link_button" href="contact.html">お問い合わせ</a>
+    </div>
+    <!-- ポルシェ仮イラスト枠(社長OK後に表示): <img class="hero_car" src="assets/img/porsche-temp.svg" alt=""> -->
+  </div>
+  <a class="hero_scroll" href="#service" aria-label="下へスクロール"><span>SCROLL</span><span class="hero_scroll_arrow"></span></a>
 </section>
 
-<!-- ===== サービス案内 ===== -->
-<section class="section">
+<!-- =========================================================
+     2. サービスカード4枚(箱風フレーム・アイコン付き)
+========================================================= -->
+<section class="section svc_section reveal" id="service">
   <div class="section_head"><span class="en">SERVICE</span><h2 class="ja">サービス案内</h2></div>
-  <div class="service_grid">
-    <a class="service_card" href="maintenance.html">
-      <span class="thumb"><img src="assets/img/catch-maintenance.webp" alt="車検整備"></span>
-      <span class="body"><span class="title">安心安全の車検整備</span>
-        <span class="text">水野谷自動車は国指定の認証工場です。過去の整備記録を管理し、過剰整備をなくした適切な整備をご提案します。</span>
-        <span class="more">詳しく見る →</span></span>
+  <div class="svc4_grid">
+    <a class="svc_card" href="maintenance.html">
+      <span class="svc_icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30h32M12 30l3-9a4 4 0 0 1 3.8-2.8h10.4A4 4 0 0 1 33 21l3 9M8 30v6M40 30v6"/><circle cx="16" cy="34" r="3"/><circle cx="32" cy="34" r="3"/></svg>
+      </span>
+      <span class="svc_body">
+        <span class="svc_no">01</span>
+        <span class="svc_title">車検・整備</span>
+        <span class="svc_text">国指定の認証工場。過剰整備をなくし、記録に基づく適切な整備をご提案します。</span>
+        <span class="svc_more">詳しく見る →</span>
+      </span>
     </a>
-    <a class="service_card" href="repair.html">
-      <span class="thumb"><img src="assets/img/catch-repair.webp" alt="鈑金・塗装・ガラスリペア"></span>
-      <span class="body"><span class="title">鈑金・塗装・ガラスリペア</span>
-        <span class="text">小さなキズから、事故による大きなダメージまで完全に修復調整します。</span>
-        <span class="more">詳しく見る →</span></span>
+    <a class="svc_card" href="repair.html">
+      <span class="svc_icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 12l6 6-16 16-6 2 2-6z"/><path d="M12 36l-2 2M34 10l4-4 4 4-4 4z"/></svg>
+      </span>
+      <span class="svc_body">
+        <span class="svc_no">02</span>
+        <span class="svc_title">鈑金・塗装</span>
+        <span class="svc_text">小さなキズから事故の大きなダメージまで。ガラスリペアも含め完全に修復します。</span>
+        <span class="svc_more">詳しく見る →</span>
+      </span>
     </a>
-    <a class="service_card" href="usedcar-sales.html">
-      <span class="thumb"><span class="img_placeholder">車両写真は準備中です<br>【社長確認】正規の在庫写真に差し替え予定</span></span>
-      <span class="body"><span class="title">中古車販売</span>
-        <span class="text">多種多彩な中古車選びが可能です。ご予算・ご希望に合わせてお探しします。</span>
-        <span class="more">詳しく見る →</span></span>
+    <a class="svc_card" href="usedcar-sales.html">
+      <span class="svc_icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 28h28M14 28l3-8a4 4 0 0 1 3.8-2.6h6.4A4 4 0 0 1 31 20l3 8M10 28v5M38 28v5"/><circle cx="17" cy="33" r="2.6"/><circle cx="31" cy="33" r="2.6"/><path d="M24 8v6M21 11h6"/></svg>
+      </span>
+      <span class="svc_body">
+        <span class="svc_no">03</span>
+        <span class="svc_title">中古車販売</span>
+        <span class="svc_text">在庫一覧は設けず、ご希望の車種・ご予算をうかがってお探しする相談窓口型です。</span>
+        <span class="svc_more">相談してみる →</span>
+      </span>
     </a>
-    <a class="service_card" href="coating.html">
-      <span class="thumb"><img src="assets/img/catch-coating.webp" alt="ボディーコーティング"></span>
-      <span class="body"><span class="title">ボディーコーティング</span>
-        <span class="text">より美しく、より優雅に。VOCを含まないスーパーガラスコーティングで洗練された輝きをいつまでも。</span>
-        <span class="more">詳しく見る →</span></span>
+    <a class="svc_card" href="coating.html">
+      <span class="svc_icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6c6 8 10 13 10 19a10 10 0 0 1-20 0c0-6 4-11 10-19z"/><path d="M20 27a4 4 0 0 0 4 4"/></svg>
+      </span>
+      <span class="svc_body">
+        <span class="svc_no">04</span>
+        <span class="svc_title">コーティング</span>
+        <span class="svc_text">VOCを含まないスーパーガラスコーティング。洗練された輝きを長く保ちます。</span>
+        <span class="svc_more">詳しく見る →</span>
+      </span>
     </a>
   </div>
 </section>
 
-<!-- ===== お知らせ ===== -->
-<section class="section" style="padding-top:0;">
+<!-- =========================================================
+     3. お知らせ / ブログ(受け皿のみ)
+     ・一覧の雛形まで。記事ページ雛形はJ-DRYのBLOG方式(専用フォーマット投稿→自動反映)確定後に接続。
+     ・日付・本文は【社長確認】で差し替え。
+========================================================= -->
+<section class="section news_section reveal" style="padding-top:0;">
   <div class="section_head"><span class="en">NEWS</span><h2 class="ja">お知らせ</h2></div>
   <div class="news_wrap">
     <ul class="news_list">
-      <li><span class="date">—</span><span class="title">ホームページをリニューアルしました。<!-- 【社長確認】掲載するお知らせ内容・日付をご指定ください（現状は仮） --></span></li>
+      <li><span class="date">2026.07.--</span><span class="cat_tag">お知らせ</span><span class="title">ホームページをリニューアルしました。<!-- 【社長確認】掲載する文面・公開日をご指定ください(現状は仮) --></span></li>
+      <li><span class="date">----.--.--</span><span class="cat_tag">お知らせ</span><span class="title">（お知らせの2件目・雛形。BLOG方式確定後に記事ページへリンクします）</span></li>
     </ul>
+    <!-- 記事ページ雛形は BLOG方式(J-DRY)確定後に別途作成。今回は一覧の受け皿のみ。 -->
+    <p class="news_more_wrap"><span class="news_more_note">※お知らせ一覧・ブログは準備中です</span></p>
+  </div>
+</section>
+
+<!-- =========================================================
+     4. ギャラリー(既存写真をグリッド配置・後日差し替え前提)
+     ★画像パスは下記1ブロックに集約。撮影分が届いたらここだけ差し替える。
+========================================================= -->
+<section class="section gallery_section reveal" style="padding-top:0;">
+  <div class="section_head"><span class="en">GALLERY</span><h2 class="ja">ギャラリー</h2></div>
+  <!-- ===== ギャラリー画像 一元管理ブロック(ここだけ差し替え) ===== -->
+  <div class="tile_grid gallery_grid">
+    <div class="tile"><a class="thumb" href="assets/img/mv2.webp"><img src="assets/img/mv2.webp" alt="鈑金・塗装の作業風景" loading="lazy"></a><span class="title">鈑金・塗装</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/mv3.webp"><img src="assets/img/mv3.webp" alt="中古車販売" loading="lazy"></a><span class="title">中古車販売</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/mv4.webp"><img src="assets/img/mv4.webp" alt="工場での整備" loading="lazy"></a><span class="title">整備の様子</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/catch-maintenance.webp"><img src="assets/img/catch-maintenance.webp" alt="車検整備" loading="lazy"></a><span class="title">車検整備</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/catch-repair.webp"><img src="assets/img/catch-repair.webp" alt="鈑金・塗装・ガラスリペア" loading="lazy"></a><span class="title">ガラスリペア</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/catch-coating.webp"><img src="assets/img/catch-coating.webp" alt="ボディーコーティング" loading="lazy"></a><span class="title">コーティング</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/repair-hero.webp"><img src="assets/img/repair-hero.webp" alt="鈑金塗装ブース" loading="lazy"></a><span class="title">塗装ブース</span></div>
+    <div class="tile"><a class="thumb" href="assets/img/maintenance-diagnostic.webp"><img src="assets/img/maintenance-diagnostic.webp" alt="システム診断機" loading="lazy"></a><span class="title">システム診断</span></div>
+  </div>
+  <!-- ===== /ギャラリー画像 一元管理ブロック ===== -->
+</section>
+
+<!-- =========================================================
+     5. Instagram(Behold.so連携・@yoshimasa_mizunoya)
+     ・Feed ID発行までプレースホルダ枠のみ。IDは assets/js/site.js の BEHOLD_FEED_ID に設定。
+========================================================= -->
+<section class="section_insta insta_section reveal">
+  <div class="section_head"><span class="en">INSTAGRAM</span><h2 class="ja">インスタグラム</h2></div>
+  <p class="insta_account"><a href="https://www.instagram.com/yoshimasa_mizunoya/" target="_blank" rel="noopener nofollow">@yoshimasa_mizunoya</a></p>
+  <div class="insta_feed">
+    <div class="insta_placeholder">Instagram<br>準備中</div>
+    <div class="insta_placeholder">Instagram<br>準備中</div>
+    <div class="insta_placeholder">Instagram<br>準備中</div>
+    <div class="insta_placeholder">Instagram<br>準備中</div>
+    <div class="insta_placeholder">Instagram<br>準備中</div>
+    <div class="insta_placeholder">Instagram<br>準備中</div>
+  </div>
+  <!-- 【社長確認】Behold.so の Feed ID 発行後、site.js の BEHOLD_FEED_ID に設定すると自動表示されます。 -->
+</section>
+
+<!-- =========================================================
+     6. 会社案内ダイジェスト(認証番号・SINCE 1978・アクセス地図)
+========================================================= -->
+<section class="company_digest reveal">
+  <div class="cd_inner">
+    <div class="cd_lead">
+      <div class="section_head" style="text-align:left;margin-bottom:24px;"><span class="en">ABOUT US</span><h2 class="ja">会社案内</h2></div>
+      <p class="cd_since">SINCE <strong>1978</strong>（昭和53年 創立）</p>
+      <p class="cd_text">有限会社 水野谷自動車は、矢吹町でクルマの車検・整備から鈑金塗装、中古車、コーティングまでを一貫して承る「クルマのかかりつけ工場」です。国指定の認証工場として、確かな技術で地域のカーライフを支えています。</p>
+      <p class="cd_cert"><img class="cd_badge" src="assets/img/badge-temp.svg" alt="認証"><span><span class="cd_cert_label">仙台陸運局 認証番号</span><span class="cd_cert_no">仙4-6522</span></span></p>
+      <p class="cd_access">東北自動車道 矢吹ICより車で10分／あぶくま高原道路 矢吹中央ICより車で5分</p>
+      <a class="link_button accent" href="company.html">会社概要を見る</a>
+    </div>
+    <div class="cd_map">
+      <div class="map_wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21385.23692636348!2d140.31753046354038!3d37.17802781918279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602047feeac67baf%3A0xe16a76586732069e!2z44CSOTY5LTAyNjUg56aP5bO255yM6KW_55m95rKz6YOh55-i5ZC555S65Lit55WR5Y2X77yZ77yT4oiS77yS!5e0!3m2!1sja!2sjp!4v1603087754512!5m2!1sja!2sjp" allowfullscreen loading="lazy" title="有限会社 水野谷自動車 地図"></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===== CTA帯 ===== -->
-<section class="cta_band">
-  <p class="cta_head">お気軽にお問い合わせください</p>
+<section class="cta_band reveal">
+  <p class="cta_head">クルマのこと、まずはお気軽に</p>
   <p class="cta_sub">車検・整備・鈑金塗装・中古車・コーティングのご相談を承ります（受付 9:00 - 18:00 ／ 日・祝日除く）</p>
   <div class="cta_actions">
     <a class="tel_button" href="tel:0248-43-2455"><span><span class="tel_sub">お電話でのお問い合わせ</span><span class="tel_num">0248-43-2455</span></span></a>
@@ -99,10 +195,12 @@
   </div>
 </section>
 
-<!-- ===== フッター ===== -->
+<!-- =========================================================
+     7. フッター(紺ベタ) — .home スコープで theme.css が紺背景に上書き
+========================================================= -->
 <footer>
   <div id="footer_top"><div id="footer_top_inner">
-    <div id="footer_logo_image"><span class="text_logo"><span class="lg_en">MIZUNOYA JIDOSHA</span><span class="lg_ja">有限会社 水野谷自動車</span></span></div>
+    <div id="footer_logo_image"><a href="index.html"><img class="footer_brand_logo" src="assets/img/logo-temp.svg" alt="有限会社 水野谷自動車"></a></div>
     <p id="footer_info">〒969-0265 福島県西白河郡矢吹町中畑南93-2<br>TEL 0248-43-2455 ／ 受付時間 9:00 - 18:00 [ 日・祝日除く ]</p>
     <ul id="footer_menu_list">
       <li><a href="index.html">HOME</a></li>
@@ -116,7 +214,32 @@
   </div></div>
   <div id="footer_bottom"><p id="copyright">&copy; 有限会社 水野谷自動車 All Rights Reserved.</p></div>
 </footer>
+
+<!-- スマホ常時表示の電話ボタン(フローティング) -->
+<a class="floating_tel" href="tel:0248-43-2455" aria-label="電話をかける 0248-43-2455">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+  <span class="ft_txt"><span class="ft_sub">お電話はこちら</span><span class="ft_num">0248-43-2455</span></span>
+</a>
+
 <a id="return_top" href="#" aria-label="ページ上部へ戻る">↑</a>
 <script src="assets/js/site.js"></script>
+<!-- スクロール連動フェードイン(TOPページ限定・軽量。共有site.jsは変更しない) -->
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('is-visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
 </body>
 </html>

@@ -8,8 +8,7 @@
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/theme.css">
 </head>
-<!-- class="sub" で下層ページ共通の新トーン(紺ベタフッター/フローティング電話/余白)を適用 -->
-<body class="sub">
+<body>
 <!-- ===== ヘッダー ===== -->
 <header id="header">
   <div id="header_inner">
@@ -90,11 +89,6 @@
   </div></div>
   <div id="footer_bottom"><p id="copyright">&copy; 有限会社 水野谷自動車 All Rights Reserved.</p></div>
 </footer>
-<!-- スマホ常時表示の電話ボタン(フローティング・全ページ共通) -->
-<a class="floating_tel" href="tel:0248-43-2455" aria-label="電話をかける 0248-43-2455">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
-  <span class="ft_txt"><span class="ft_sub">お電話はこちら</span><span class="ft_num">0248-43-2455</span></span>
-</a>
 <a id="return_top" href="#" aria-label="ページ上部へ戻る">↑</a>
 <script src="assets/js/site.js"></script>
 </body>

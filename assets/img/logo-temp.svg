@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="ミズノヤシドウシャ（仮ロゴ）">
+  <!-- 仮素材: AIデータ到着後に正式なカタカナロゴSVGへ差し替え。看板のトレースではない簡易プレースホルダ。 -->
+  <rect x="6" y="6" width="188" height="228" rx="10" fill="#d8232a"/>
+  <rect x="16" y="16" width="168" height="208" rx="6" fill="none" stroke="#ffffff" stroke-width="4"/>
+  <g fill="#ffffff" font-family="'Hiragino Kaku Gothic Pro','Yu Gothic',Meiryo,sans-serif" font-weight="900" text-anchor="middle">
+    <text x="100" y="110" font-size="52" letter-spacing="2">ミズノヤ</text>
+    <text x="100" y="180" font-size="52" letter-spacing="2">シドウシャ</text>
+  </g>
+  <text x="100" y="220" fill="#ffd7d9" font-family="Arial,sans-serif" font-size="11" letter-spacing="2" text-anchor="middle">TEMP LOGO</text>
+</svg>

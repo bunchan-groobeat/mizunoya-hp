@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="KURU MAYA バッジ（仮）">
+  <!-- 仮素材: AIデータ到着後に正式なKURU MAYAバッジSVGへ差し替え。看板のトレースではない簡易プレースホルダ。 -->
+  <rect x="4" y="4" width="152" height="112" rx="8" fill="#1a408c"/>
+  <rect x="12" y="12" width="136" height="96" rx="4" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <g fill="#ffffff" font-family="Arial,'Yu Gothic',sans-serif" font-weight="900" text-anchor="middle">
+    <text x="80" y="52" font-size="30" letter-spacing="1">KURU</text>
+    <text x="80" y="90" font-size="30" letter-spacing="1">MAYA</text>
+  </g>
+</svg>
