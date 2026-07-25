@@ -382,6 +382,7 @@ h1,h2,h3,h4,p{ margin:0; }
   .cta_band .cta_head{ font-size:20px; }
   .cta_band .cta_actions{ flex-direction:column; }
 
+  .section_insta{ padding:44px 15px; }
   .insta_feed{ grid-template-columns:repeat(3,1fr); gap:4px; }
 
   .contact_wrap{ padding:40px 15px 60px; }
