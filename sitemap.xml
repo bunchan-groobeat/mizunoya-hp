@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 2026-07-30 ルイージ作成(候補3)。lastmodは公開反映日ではなく作成日基準。実記事なしの blog-article.html(雛形)は薄コンテンツ回避のため除外。
+     ★GitHub Pagesプロジェクトページのため、Google Search Console でこの sitemap URL を直接送信すること(robots.txt経由の自動発見はサブパスでは効かない)。 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/maintenance.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/repair.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/usedcar-sales.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/coating.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/company.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/contact.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bunchan-groobeat.github.io/mizunoya-hp/blog.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

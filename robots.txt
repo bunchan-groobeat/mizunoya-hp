@@ -1,0 +1,9 @@
+# 2026-07-30 ルイージ作成(候補3)
+# ★注意: GitHub Pagesのプロジェクトページ(サブパス配信)では、この robots.txt はクローラに
+#   「サイトの robots.txt」として認識されない(有効なのはホスト直下 https://bunchan-groobeat.github.io/robots.txt のみ)。
+#   よって Sitemap 行の自動発見は効かない。sitemap は Google Search Console で直接送信すること。
+#   独自ドメイン(サイトがルート配信)へ移行した際に、このファイルがそのまま有効になる。
+User-agent: *
+Allow: /
+
+Sitemap: https://bunchan-groobeat.github.io/mizunoya-hp/sitemap.xml
