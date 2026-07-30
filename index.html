@@ -22,13 +22,9 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/favicon.svg">
 
-<!-- ▼ 構造化データ(JSON-LD) 2026-07-30 ルイージ追加 ─ MEO(ローカル検索/Googleマップ)対策の核 =========
-     ★NAP要社長確認（確認が取れ次第この注記を外す）:
-       - telephone / address … 現行サイト表記を正として実装
-       - openingHours … サイト表記「受付 9:00-18:00 日・祝除く」→ Mo-Sa と解釈(土曜が営業日か要確認)
-       - geo座標 … 現行サイトの地図埋め込み中心座標に由来(実際の車庫位置と誤差の可能性・要確認)
-     ★NAP変更時は index.html と company.html の両方のJSON-LDを必ず更新すること(不一致はMEO上むしろ逆効果)。
-============================================================================================= -->
+<!-- ▼ 構造化データ(JSON-LD) 2026-07-30 ルイージ追加 ─ MEO(ローカル検索/Googleマップ)対策の核。
+     NAP(電話/住所/営業時間 Mo-Sat 09:00-18:00 日祝除く)は社長確認済(2026-07-30)。geo座標は現行サイトの地図埋め込みに由来。
+     ★NAP変更時は index.html と company.html の両方のJSON-LDを必ず更新すること(不一致はMEO上むしろ逆効果)。 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
