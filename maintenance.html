@@ -7,6 +7,29 @@
 <meta name="description" content="水野谷自動車は国指定の認証工場（仙台陸運局認証番号 仙4-6522）。軽自動車から大型自動車まで車検整備・一般整備を承ります。過剰整備をなくし、システム診断機を完備した確かな整備をご提供します。">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/theme.css">
+
+<!-- ▼ 構造化データ(JSON-LD) 2026-07-30 ルイージ追加 ─ Service + パンくず。providerは #business を@id参照(NAP重複回避) -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "車検・整備",
+    "provider": { "@type": "AutoRepair", "@id": "https://bunchan-groobeat.github.io/mizunoya-hp/#business", "name": "有限会社 水野谷自動車" },
+    "areaServed": { "@type": "AdministrativeArea", "name": "福島県西白河郡矢吹町およびその周辺" },
+    "url": "https://bunchan-groobeat.github.io/mizunoya-hp/maintenance.html",
+    "description": "国指定の認証工場による車検・整備。過剰整備をなくし、記録に基づく適切な整備をご提案します。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://bunchan-groobeat.github.io/mizunoya-hp/" },
+      { "@type": "ListItem", "position": 2, "name": "車検整備", "item": "https://bunchan-groobeat.github.io/mizunoya-hp/maintenance.html" }
+    ]
+  }
+]
+</script>
 </head>
 <!-- class="sub" で下層ページ共通の新トーン(紺ベタフッター/フローティング電話/余白)を適用 -->
 <body class="sub">

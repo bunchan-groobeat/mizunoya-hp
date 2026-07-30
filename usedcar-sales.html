@@ -7,6 +7,29 @@
 <meta name="description" content="有限会社 水野谷自動車の中古車販売。多種多彩な中古車選びが可能です。ご予算・ご希望に合わせて、認証工場ならではの整備済みの一台をご提案します。">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/theme.css">
+
+<!-- ▼ 構造化データ(JSON-LD) 2026-07-30 ルイージ追加 ─ Service + パンくず。providerは #business を@id参照(NAP重複回避) -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "中古車販売(相談窓口型)",
+    "provider": { "@type": "AutoRepair", "@id": "https://bunchan-groobeat.github.io/mizunoya-hp/#business", "name": "有限会社 水野谷自動車" },
+    "areaServed": { "@type": "AdministrativeArea", "name": "福島県西白河郡矢吹町およびその周辺" },
+    "url": "https://bunchan-groobeat.github.io/mizunoya-hp/usedcar-sales.html",
+    "description": "在庫一覧は設けず、ご希望の車種・ご予算をうかがってお探しする相談窓口型の中古車販売です。"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "HOME", "item": "https://bunchan-groobeat.github.io/mizunoya-hp/" },
+      { "@type": "ListItem", "position": 2, "name": "中古車販売", "item": "https://bunchan-groobeat.github.io/mizunoya-hp/usedcar-sales.html" }
+    ]
+  }
+]
+</script>
 </head>
 <!-- class="sub" で下層ページ共通の新トーン(紺ベタフッター/フローティング電話/余白)を適用 -->
 <body class="sub">

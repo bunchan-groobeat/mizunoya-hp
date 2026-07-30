@@ -7,6 +7,52 @@
 <meta name="description" content="福島県西白河郡矢吹町の有限会社 水野谷自動車。SINCE 1978、国指定認証工場（仙4-6522）。車検整備・鈑金塗装・中古車販売・ボディーコーティングまで、クルマのことをまるごとお任せください。">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/theme.css">
+
+<!-- ▼ 構造化データ(JSON-LD) 2026-07-30 ルイージ追加 ─ MEO(ローカル検索/Googleマップ)対策の核 =========
+     ★NAP要社長確認（確認が取れ次第この注記を外す）:
+       - telephone / address … 現行サイト表記を正として実装
+       - openingHours … サイト表記「受付 9:00-18:00 日・祝除く」→ Mo-Sa と解釈(土曜が営業日か要確認)
+       - geo座標 … 現行サイトの地図埋め込み中心座標に由来(実際の車庫位置と誤差の可能性・要確認)
+     ★NAP変更時は index.html と company.html の両方のJSON-LDを必ず更新すること(不一致はMEO上むしろ逆効果)。
+============================================================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "@id": "https://bunchan-groobeat.github.io/mizunoya-hp/#business",
+  "name": "有限会社 水野谷自動車",
+  "alternateName": "ミズノヤシドウシャ",
+  "url": "https://bunchan-groobeat.github.io/mizunoya-hp/",
+  "image": "https://bunchan-groobeat.github.io/mizunoya-hp/assets/img/mv1.webp",
+  "telephone": "0248-43-2455",
+  "foundingDate": "1978",
+  "founder": { "@type": "Person", "name": "水野谷 吉夫" },
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "969-0265",
+    "addressCountry": "JP",
+    "addressRegion": "福島県",
+    "addressLocality": "西白河郡矢吹町",
+    "streetAddress": "中畑南93-2"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 37.178028, "longitude": 140.317530 },
+  "hasMap": "https://maps.google.com/?q=37.178028,140.317530",
+  "areaServed": { "@type": "AdministrativeArea", "name": "福島県西白河郡矢吹町およびその周辺" },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }],
+  "sameAs": ["https://www.instagram.com/yoshimasa_mizunoya/"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "車検・整備", "url": "https://bunchan-groobeat.github.io/mizunoya-hp/maintenance.html" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "鈑金・塗装・ガラスリペア", "url": "https://bunchan-groobeat.github.io/mizunoya-hp/repair.html" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "中古車販売", "url": "https://bunchan-groobeat.github.io/mizunoya-hp/usedcar-sales.html" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ボディーコーティング", "url": "https://bunchan-groobeat.github.io/mizunoya-hp/coating.html" } }
+  ]
+}
+</script>
 </head>
 <!-- class="home" で TOPページだけに新配色(赤メイン/紺締め)・紺ベタフッターを適用。下層ページには影響させない。 -->
 <body class="home">
