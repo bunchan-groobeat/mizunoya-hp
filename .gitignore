@@ -5,3 +5,8 @@ assets/img/collected/
 # OS/エディタ
 Thumbs.db
 .DS_Store
+# ★2026-08-06 テツオ監査（tetsuo/review/2026-08-06_水野谷HP_bak9本の公開配信_監査.md）
+# .bak 9本が GitHub Pages で全世界配信されていた（本番 HTTP 200 を実測）。
+# Pages はリポジトリのルートを丸ごと配信するため、作業用の控えを追跡すると必ず公開される。
+# ★"*.bak" だけでは theme.css.bak_pc-fontsize-20260711 にマッチせず穴が残る（テツオ指摘）。
+*.bak*
