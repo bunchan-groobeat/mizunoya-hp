@@ -1,8 +1,6 @@
 @charset "utf-8";
 /* =========================================================
    ぶんちゃん式 車屋サイト 共通ベースCSS
-   出自: J-DRY(jdry-hp)の構造CSSを車屋向けに一般化・トークン化したもの。
-   ジローが1回だけ作成し、Pazoo/水野谷の両サイトで共有する(二重管理しない)。
 
    使い方:
    1. 各サイトは <link rel="stylesheet" href="assets/css/base.css"> を最初に読む
@@ -15,7 +13,7 @@
   --accent:#1a5aa8;         /* アクセント色。車屋ごとに変更 */
   --accent-2:#c8102e;       /* 補助アクセント(電話CTA等) */
   --base:#222222;           /* 本文・濃色 */
-  --panel:#eef1f5;          /* 面の淡色(帯・フッター背景。旧J-DRYのベージュ相当) */
+  --panel:#eef1f5;          /* 面の淡色(帯・フッター背景) */
   --line:#dddddd;           /* 罫線 */
   --muted:#888888;          /* 補助テキスト */
   --container:1160px;
@@ -172,7 +170,7 @@ h1,h2,h3,h4,p{ margin:0; }
 .feature_row .desc{ font-size:15px; line-height:2.2; }
 .feature_row .desc + .desc{ margin-top:1em; }
 
-/* 画像プレースホルダ(素材待ち) */
+/* 画像プレースホルダ */
 .img_placeholder{
   display:flex; align-items:center; justify-content:center; min-height:260px;
   background:var(--panel); color:#a99; font-size:13px; border:1px dashed #c9c2b6; text-align:center; padding:20px;
@@ -192,7 +190,7 @@ h1,h2,h3,h4,p{ margin:0; }
 }
 .tile:hover .title{ transform:translateY(0); }
 
-/* ライトボックス(J-DRY流用: 白背景・送り・ローディング・キャプション) */
+/* ライトボックス(白背景・送り・ローディング・キャプション) */
 .lightbox_overlay{
   position:fixed; inset:0; background:rgba(255,255,255,.94); z-index:1000;
   display:none; align-items:center; justify-content:center; cursor:pointer; padding:20px; overflow:hidden;

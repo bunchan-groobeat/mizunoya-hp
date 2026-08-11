@@ -1,6 +1,5 @@
 /* =========================================================
    ぶんちゃん式 車屋サイト 共通スクリプト
-   出自: J-DRY(jdry-hp) main.js を車屋向けに一般化。
    - メインスライダー(PC #top_slider / スマホ #sp_slider)
    - ライトボックス(施工例・在庫写真の拡大 + 送り)
    - お問い合わせフォーム(Formspree 非同期送信)
@@ -65,7 +64,7 @@
       .catch(function (e) { console.warn('Instagram feed:', e); });
   }
 
-  /* ---------- ライトボックス(J-DRY流用) ---------- */
+  /* ---------- ライトボックス ---------- */
   function initLightbox() {
     var links = document.querySelectorAll('a.thumb[href$=".jpg"], a.thumb[href$=".png"], a.thumb[href$=".jpeg"], a.thumb[href$=".webp"]');
     if (!links.length) return;
