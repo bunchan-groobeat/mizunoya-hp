@@ -19,3 +19,8 @@ docs/
 tools/
 監査_*.md
 KENPIN_*.md
+
+# ★2026-09-18 検品：Pages はリポジトリ直下を丸ごと配信するため、社内資料の .md を追跡すると必ず公開される
+# （.bak 9本→docs/→ここで3度目の同型。Pazooでは旧デザイン案が実測200で出ていた）
+# 公開に必要な .md は無い（llms.txt・robots.txt・sitemap.xml は .md ではない）
+*.md
